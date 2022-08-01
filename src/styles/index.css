@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Manrope:wght@800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+/* ### Primary */
+--light-Cyan: hsl(193, 38%, 86%);
+--neon-Green: hsl(150, 100%, 66%);
+/* ### Neutral */
+--grayish-Blue: hsl(217, 19%, 38%);
+--dark-Grayish-Blue: hsl(217, 19%, 24%);
+--dark-Blue: hsl(218, 23%, 16%);
+/* font */
+--font-family:"Manrope, sans-serif";
+}
+
+body{
+    font-family: "Manrope", sans-serif;
+    background-color: var(--dark-Blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: calc(100vh - 0.1px);
+    padding: 1.25rem;
+}
+
+.container {
+    position: relative;
+    background-color: var(--dark-Grayish-Blue);
+    padding: 2rem 2rem 3rem;
+    color: var(--light-Cyan);
+    border-radius: 1.25rem;
+}
+
+.container h1{
+    color: var(--neon-Green);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1.9rem;
+}
+
+.container p {
+    color: var(--light-Cyan);
+    font-size: 1.3rem;
+    line-height: 1.5;
+    padding-bottom: 2rem;
+}
+.container picture img {
+    position: relative;
+}
+.container picture::before{
+    position: absolute;
+    background-color: var(--light-Cyan);
+    content: "";
+    width: 40%;
+    height: 1px;
+    right: 1.25rem;
+    bottom: 3.8rem;
+    display: block;
+    z-index: 99;
+}
+.container picture::after{
+position: relative;
+background-color: var(--light-Cyan);
+content: "";
+width: 45%;
+height: 1px;
+left: 0;
+bottom: 0.74rem;
+display: block;
+}
+
+img{
+    max-width: 100%;
+}
+
+button{
+    user-select: none;
+}
+
+.container button {
+    position: absolute;
+    background-color: var(--neon-Green);
+    padding: 1.25rem;
+    border-radius: 50%;
+    border: none;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    bottom: -2rem;
+}
+
+@media (min-width: 768px) {
+    .container{
+        max-width: 650px;
+    }
+}
